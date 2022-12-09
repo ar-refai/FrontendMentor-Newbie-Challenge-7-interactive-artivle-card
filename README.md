@@ -1,2 +1,3 @@
-# FrontendMentor-Newbie-Challenge-7-interactive-artivle-card
-Designing an artivle card component as Practice Using HTML , CSS and JS.
+# Frontend Mentor - Article preview component
+
+![Design preview for the Article preview component coding challenge](./design/desktop-preview.jpg)

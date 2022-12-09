@@ -1,0 +1,258 @@
+/* Frontend Mentor Challenge */
+/* Coded By : Abdelrahman Elrefai Tawfik */
+/* general styling */
+:root {
+    --vd-gry-blue: hsl(217, 19%, 35%);
+    --d-gry-blue: hsl(214, 17%, 51%);
+    --gry-blue: hsl(212, 23%, 69%);
+    --lght-gry-blue: hsl(210, 46%, 95%);
+    --wite: hsl(0, 0, 100%);
+}
+
+@font-face {
+    font-family: manrope;
+    src: url(font/Manrope-VariableFont_wght.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    transition: 0.6s;
+}
+
+body {
+    background-color: var(--lght-gry-blue);
+    height: 100vh;
+    font-family: manrope, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    line-height: 1.4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+
+}
+
+/* article styling */
+.art {
+    position: relative;
+    width: 350px;
+    background-color: #ffffff;
+    border-radius: 10px;
+
+}
+
+.art h1 {
+    font-weight: bold;
+    transition: all .1s ease;
+}
+
+.art h1:hover {
+    transform: scale(1.01);
+}
+
+.art-img {
+    overflow: hidden;
+}
+
+.art-img img {
+    width: 100%;
+    max-height: 250px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: all .2s ease;
+}
+
+.art-img img:hover {
+    opacity: .7;
+}
+
+.art-cont {
+    display: grid;
+    row-gap: 30px;
+    padding: 40px 30px 20px 30px;
+
+}
+
+/* avatar styling */
+.avatar {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.art-avatar {
+    margin: 10px 30px;
+}
+
+.art-avatar img {
+    border-radius: 50%;
+    transition: all .2s ease;
+}
+
+.art-avatar img:hover {
+    transform: scale(1.1);
+}
+
+.art-avatar-desc {
+    word-spacing: 1px;
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    transition: all .2s ease;
+}
+
+.art-avatar-desc:hover {
+    font-size: 13px;
+}
+
+.art-avatar-desc p:nth-child(1) {
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.art-avatar-desc p:nth-child(2) {
+    letter-spacing: 1px;
+    color: var(--gry-blue);
+}
+
+/* share styling */
+.share-button {
+    background-color: var(--lght-gry-blue);
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50%;
+    margin-left: auto;
+    position: absolute;
+    z-index: 2;
+    /* to be on top */
+    right: 30px;
+    transition: all .3s ease;
+}
+
+.share-button:hover {
+    background-color: var(--wite);
+    transform: rotate(-90deg);
+}
+
+.art-share {
+    display: none;
+    position: absolute;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 22px 30px;
+    color: #fff;
+    background-color: var(--vd-gry-blue);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.art-share p {
+    display: inline;
+    color: var(--gry-blue);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-right: 20px;
+
+}
+
+.art-share a {
+    margin-left: 10px;
+    transition: all .2s ease;
+}
+
+.art-share a:hover {
+    transform: scale(.9);
+    border-bottom: 2px solid #ffffff;
+    margin-bottom: -2px;
+}
+
+/* general class */
+.show {
+    display: flex !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+.button-active {
+    filter: brightness(150%);
+    ;
+    background-color: var(--gry-blue);
+}
+
+/*  responsive design */
+@media screen and (min-width:1440px) {
+    .art {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        width: auto;
+        max-width: 800px;
+        height: auto;
+        margin: auto
+    }
+
+    .art h1 {
+        font-size: 21px;
+        line-height: 1.2;
+    }
+
+    .art-img img {
+        width: 101%;
+        max-height: 100%;
+        height: 100%;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+    }
+
+    .art-cont {
+        row-gap: 20px;
+        padding: 30px 40px 0 40px;
+    }
+
+    .art-avatar-desc {
+        display: inline-block;
+        left: 34%;
+        transform: translate(-50%, -50%);
+    }
+
+    .share-button {
+        right: 40px;
+    }
+
+    .art-share {
+        display: none;
+        width: auto;
+        padding: 30px 20px;
+        background-color: var(--vd-gry-blue);
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 15px 20px;
+        position: absolute;
+        z-index: 1;
+        bottom: 87%;
+        left: 66%;
+    }
+
+    .art-share:after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        /* At the bottom of the tooltip */
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: black transparent transparent transparent;
+    }
+
+}
