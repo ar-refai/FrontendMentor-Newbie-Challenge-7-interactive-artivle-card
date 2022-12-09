@@ -43,12 +43,12 @@ body {
 
 }
 
-.art h1 {
+.art h2 {
     font-weight: bold;
     transition: all .1s ease;
 }
 
-.art h1:hover {
+.art h2:hover {
     transform: scale(1.01);
 }
 
@@ -200,7 +200,7 @@ body {
         margin: auto
     }
 
-    .art h1 {
+    .art h2 {
         font-size: 21px;
         line-height: 1.2;
     }
